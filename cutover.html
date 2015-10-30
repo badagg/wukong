@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>cutover</title>
+	<link rel="stylesheet" href="style/base.css" />
+	<link rel="stylesheet" href="style/plugin.css" />
+	<style type="text/css">
+		body{ overflow: hidden;}
+		.ct{ width: 300px; overflow: hidden;  margin: 50px auto 1px; position: relative;}
+		.ct ol li{float: left; width: 20px; height: 20px; background: #ddd; margin-right: 1px; text-align: center; cursor: pointer;}
+		.ct ol li.select{ background: #333; color: #fff;}
+		.myCutover ul {width: 300px; height: 180px; position: relative; margin: 0 auto;overflow: hidden;}
+		.myCutover ul li{position: absolute; width: 300px; height: 180px;}
+		.btn{ width: 300px; margin: 5px auto;}
+		.btn button{ padding: 5px 10px;}
+	</style>
+</head>
+<body>
+	<div class="ct">
+		<ol swk-cutover-trigger="#myCutover">
+			<li class="select">1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+		</ol>
+	</div>
+	<div class="myCutover">
+		<ul id="myCutover" role="swk-cutover" effect="scrollx" auto="true" mouseEvent="click">
+			<li t="0"><img src="http://fed.yhd.cn:9000/300x180" /></li>
+			<li t="1"><img src="http://fed.yhd.cn:9000/300x180" /></li>
+			<li t="2"><img src="http://fed.yhd.cn:9000/300x180" /></li>
+			<li t="3"><img src="http://fed.yhd.cn:9000/300x180" /></li>
+		</ul>
+	</div>
+	<div class="btn">
+		<button swk-cutover-prev="#myCutover">prev</button>
+		<button swk-cutover-next="#myCutover">next</button>
+	</div>
+	
+	<div class="ct">
+		<ol swk-cutover-trigger="#myCutover2">
+			<li class="select">1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+		</ol>
+	</div>
+	<div class="myCutover">
+		<ul id="myCutover2" role="swk-cutover" effect="scrolly" delay="200">
+			<li t="0"><img src="http://fed.yhd.cn:9000/300x180" /></li>
+			<li t="1"><img src="http://fed.yhd.cn:9000/300x180" /></li>
+			<li t="2"><img src="http://fed.yhd.cn:9000/300x180" /></li>
+			<li t="3"><img src="http://fed.yhd.cn:9000/300x180" /></li>
+		</ul>
+	</div>
+	<div class="btn">
+		<button swk-cutover-prev="#myCutover2">prev</button>
+		<button swk-cutover-next="#myCutover2">next</button>
+	</div>
+
+
+</body>
+</html>
+<script type="text/javascript" src="js/libs/require.js" data-main="js/app/cutover-main"></script>

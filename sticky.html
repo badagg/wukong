@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>sticky</title>
+	<link rel="stylesheet" href="style/base.css" />
+	<link rel="stylesheet" href="style/plugin.css" />
+	<style type="text/css">
+		.box{ width: 800px; height: 400px; background: #ddd; margin: 0px auto;}
+		.sticky{ width: 800px; height: 30px; background: #f60; margin: 0 auto; opacity: .8; line-height: 30px; color: #fff; text-indent: 10px; font-size: 14px; font-weight: bold;}
+	</style>
+</head>
+<body>
+	<div id="aaa" class="sticky" role="swk-sticky" top="0" bottom="800">one 我设置了bottom 我只参与top~bottom之间的滚动(0~800)</div>
+	<div class="box"></div>
+	<div id="bbb" class="sticky" role="swk-sticky" top="31">two</div>
+	<div class="box"></div>
+	<div class="sticky" role="swk-sticky" top="62">three</div>
+	<div class="box"></div>
+	<div class="sticky" role="swk-sticky" top="93">four</div>
+	<div class="box"></div>
+	<div class="sticky" role="swk-sticky" top="124">five</div>
+	<div class="box"></div>
+	<div class="box"></div>
+	<div class="box"></div>
+	<div class="box"></div>
+</body>
+</html>
+<script type="text/javascript" src="js/libs/require.js" data-main="js/app/sticky-main"></script>

@@ -1,0 +1,22 @@
+require.config({
+	baseUrl:"js/",
+	paths:{
+		"jquery":"libs/jquery-1.9.1.min",
+		"widget":"plugins/widget",
+		"sticky":"plugins/sticky"
+	}
+})
+
+require(['sticky'],function(sticky){
+	sticky.config("#bbb",{
+		onFiexd:function(){
+			console.log("onfiexd");
+		},
+		unFiexd:function(){
+			console.log("unfiexd");
+		},
+		onScroll:function(a,b){
+			//console.log(a,b)
+		}
+	})
+})

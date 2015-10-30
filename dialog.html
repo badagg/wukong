@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>dialog</title>
+	<link rel="stylesheet" href="style/base.css" />
+	<link rel="stylesheet" href="style/plugin.css" />
+	<style>
+		.my_dialog{ width: 300px; height: 100px; border:1px solid #ddd; background: #fff;}
+		.you_dialog{ width: 300px; height: 200px; text-align: center; border:1px solid #ddd; background: #f60;}
+		button{ width: 100px; height: 30px;}
+	</style>
+</head>
+<body>
+	<button swk-dialog-popup="#myDialog">常用情况</button>
+	<div class="my_dialog" role="swk-dialog" id="myDialog">
+		<h3>弹框标题111</h3>
+		<div class="test">我是内容啊哈哈</div>
+		<button swk-dialog-dismiss="#myDialog">关闭</button>
+		<button swk-dialog-submit="#myDialog">提交 打开弹框</button>
+	</div>
+	<div class="you_dialog" role="swk-dialog" id="aaa" mask="true">
+		<h3>弹框标题222</h3>
+		<div class="test">我是内容啊哈哈222</div>
+		<button swk-dialog-dismiss="#aaa">关闭</button>
+		<button swk-dialog-submit="#aaa">提交</button>
+	</div>
+
+
+</body>
+</html>
+<script type="text/javascript" src="js/libs/require.js" data-main="js/app/dialog-main"></script>

@@ -1,0 +1,203 @@
+/*
+* yhd-dialog
+* 弹框插件通用样式
+*/
+/**** 模态窗 START**/
+.swk_dialog_mask{
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1040;
+	background-color: #000;
+	opacity: 0;
+	filter:alpha(opacity=0);
+	transition: opacity .3s; 
+}
+.swk_dialog_mask.fade{
+	opacity: .5;
+	filter:alpha(opacity=50);
+}
+[role="swk-dialog"]{
+	_position: absolute;
+	position: fixed;
+	z-index: 1050;
+	display: none;
+	left: 50%;
+	top: 0;
+	opacity: 0;
+	transition: all .3s ease-out;
+}
+/**** 模态窗 END**/
+
+/**** 滚动条 START**/
+.swk-scrollbar{
+	position: absolute;
+	background: rgba(255,255,255,0);
+	border-radius:4px;
+	transition: all .3s ease-out;
+}
+.swk-scrollbar:hover{
+	background: rgba(255,255,255,.3);
+}
+.swk-scrollbar.y-axis{
+	width: 8px;
+	height: 100%;
+	right: 3px;
+	top: 0;
+}
+.swk-scrollbar div{
+	position: absolute;
+	background: #999;
+	border-radius:4px;
+}
+.swk-scrollbar.y-axis div{
+	width: 100%;
+}
+.swk-scrollbar.x-axis{
+	width: 100%;
+	height: 8px;
+	left: 0;
+	bottom: 3px;
+}
+.swk-scrollbar.x-axis div{
+	height: 100%;
+}
+/**** 滚动条 END**/
+
+/**** 下拉选框 START**/
+[role="swk-select"]{
+	display: none;
+	
+}
+.swk-select{
+	position: absolute;
+	width: 100%;
+	z-index: 1020;
+	background: #fff;
+	border: 1px solid #e6e6e6;
+	cursor:pointer;
+	outline: none;
+}
+.swk-select .text{
+	font-size: 14px;
+	padding: 5px 10px;
+	color: #333;
+	padding-right: 25px;
+}
+.swk-select .content{
+	display: none;
+}
+.swk-select .header{
+	font-size: 14px;
+	font-weight: normal;
+	color: #999;
+	border-bottom: 1px solid #eee;
+	margin: 5px 0 0px 0;
+	padding: 5px 10px;
+}
+.swk-select .item{
+	padding: 8px 10px;
+	font-size: 12px;
+	color: #333;
+	cursor:pointer;
+	position: relative;
+	/*transition: all .3s ease-out;*/
+}
+
+.swk-select .item.selected:after{
+	content: '';
+	position: absolute;
+	right: 10px;
+	top: 12px;
+	width: 8px;
+	height: 4px;
+	border-left: 2px solid #8ab746;
+	border-bottom: 2px solid #8ab746;
+	transform: rotate(-45deg);
+}
+
+.swk-select .item:hover{
+	background: #f2f2f2;
+}
+.swk-select .arrow{
+	position: absolute;
+	right: 10px;
+	top: 14px;
+	width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 5px solid #333;
+	transition: all .3s ease-out;
+}
+.swk-select .disabled{
+	opacity: .5;
+	cursor:default;
+}
+.swk-select .disabled:hover{
+	background: #fff;
+}
+.swk-select.active{
+	cursor: default;
+}
+.swk-select.active .content{
+	display: block;
+}
+.swk-select.active .arrow{
+	/*border-top: none;
+    border-bottom: 5px solid #333;*/
+	border-top-color: #999;
+	transform: rotate(180deg);
+}
+/**** 下拉选框 END**/
+
+/**** deform START**/
+.swk-deform-point{
+	position: absolute;
+	background: #000;
+	border: 1px solid #eee;
+	width: 5px; 
+	height: 5px;
+	font-size: 0;
+	line-height: 0;
+	opacity: .5;
+	margin-top: -4px;
+	margin-left: -4px;
+	/*border-radius: 50%;*/
+	display: none;
+	z-index: 100;
+}
+
+.swk-deform-point.size-nw{cursor: nw-resize;}
+.swk-deform-point.size-n{cursor: s-resize;}
+.swk-deform-point.size-ne{cursor: ne-resize;}
+.swk-deform-point.size-w{cursor: w-resize;}
+.swk-deform-point.size-e{cursor: e-resize;}
+.swk-deform-point.size-sw{cursor: sw-resize;}
+.swk-deform-point.size-s{cursor: s-resize;}
+.swk-deform-point.size-se{cursor: se-resize;}
+
+.swk-deform-border{
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	/*margin-top: -1px;
+	margin-left: -1px;*/
+	font-size: 0;
+	line-height: 0;
+	opacity: .5;
+	background: url(images/jcrop.gif);
+	display: none;
+	z-index: 100;
+}
+
+
+
+
+
+/**** deform END**/
+
+
+
