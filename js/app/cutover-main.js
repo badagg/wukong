@@ -1,13 +1,11 @@
 require.config({
-	baseUrl:"js/",
+	baseUrl:"./js",
 	paths:{
-		"jquery":"libs/jquery-1.9.1.min",
-		"widget":"plugins/widget",
-		"cutover":"plugins/cutover"
+		"jquery":"libs/jquery-1.9.1.min"
 	}
 })
 
-require(['cutover'],function(co){
+require(['plugins/cutover'],function(co){
 	co.config("#myCutover",{
 		onCutover:function(i){
 			console.log(i);

@@ -1,14 +1,12 @@
 require.config({
-	baseUrl:"js/",
+	baseUrl:"./js",
 	paths:{
 		"jquery":"libs/jquery-1.9.1.min",
-		"mousewheel":"libs/mousewheel",
-		"widget":"plugins/widget",
-		"scrollbar":"plugins/scrollbar"
+		"mousewheel":"libs/mousewheel"
 	}
 })
 
-require(['jquery','scrollbar'],function($,sb){
+require(['jquery','plugins/scrollbar'],function($,sb){
 	var dest = 30;
 	$("#btn1").click(function(){
 		$(".pic").css({"width":$(".pic").width()+dest});

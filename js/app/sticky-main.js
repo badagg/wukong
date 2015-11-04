@@ -1,13 +1,11 @@
 require.config({
-	baseUrl:"js/",
+	baseUrl:"./js",
 	paths:{
-		"jquery":"libs/jquery-1.9.1.min",
-		"widget":"plugins/widget",
-		"sticky":"plugins/sticky"
+		"jquery":"libs/jquery-1.9.1.min"
 	}
 })
 
-require(['sticky'],function(sticky){
+require(['plugins/sticky'],function(sticky){
 	sticky.config("#bbb",{
 		onFiexd:function(){
 			console.log("onfiexd");

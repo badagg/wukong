@@ -1,13 +1,11 @@
 require.config({
-	baseUrl:"js/",
+	baseUrl:"./js",
 	paths:{
-		"jquery":"libs/jquery-1.9.1.min",
-		"widget":"plugins/widget",
-		"countdown":"plugins/countdown"
+		"jquery":"libs/jquery-1.9.1.min"
 	}
 })
 
-require(['countdown'],function(cd){
+require(['plugins/countdown'],function(cd){
 	cd.config(".cd1",{
 		onCountdown:function(time){
 			$(".cd1").text(time.day+"天"+time.hour+"时"+time.minute+"分"+time.second+"秒")

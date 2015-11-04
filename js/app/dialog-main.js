@@ -1,14 +1,12 @@
 require.config({
-	baseUrl:"js/",
+	baseUrl:"./js",
 	paths:{
-		"jquery":"libs/jquery-1.9.1.min",
-		"widget":"plugins/widget",
-		"dialog":"plugins/dialog"
+		"jquery":"libs/jquery-1.9.1.min"
 	}
 })
 
 
-require(['dialog'],function(dialog){
+require(['plugins/dialog'],function(dialog){
 	dialog.config("#myDialog",{
 		mask:false,
 		onSubmit:function(){

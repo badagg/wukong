@@ -1,4 +1,4 @@
-define(['jquery','widget'],function($,wg){
+define(['jquery','plugins/widget'],function($,wg){
 	function Dialog(){
 		this.currentDialog = "";
 		this.ydp = "swk-dialog-popup";

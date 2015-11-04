@@ -1,4 +1,4 @@
-define(['jquery','widget'],function($,wg){
+define(['jquery','plugins/widget'],function($,wg){
 	function Sticky(){
 		this.render();
 	}

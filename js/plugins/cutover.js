@@ -1,4 +1,4 @@
-define(['jquery','widget'],function($,wg){
+define(['jquery','plugins/widget'],function($,wg){
 	function Cutover(){
 		this.ycp = "swk-cutover-prev";
 		this.ycn = "swk-cutover-next";
@@ -6,7 +6,7 @@ define(['jquery','widget'],function($,wg){
 		this.prevs = $(document).find("["+this.ycp+"]");
 		this.nexts = $(document).find("["+this.ycn+"]");
 		this.trigs = $(document).find("["+this.yct+"]");
-
+		
 		this.render();
 	}
 	Cutover.prototype = $.extend({},new wg.Widget(),{

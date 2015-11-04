@@ -1,4 +1,4 @@
-define(['jquery','widget','mousewheel'],function($,wg){
+define(['jquery','plugins/widget','mousewheel'],function($,wg){
 	function Scrollbar(){
 		this.render();
 	}
